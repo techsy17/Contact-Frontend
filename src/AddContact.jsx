@@ -17,7 +17,7 @@ const AddContact = () => {
         const contact = { name, email, phone };
         setIsPending(true);
 
-        Api('/api/add', {
+        Api('/add', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
