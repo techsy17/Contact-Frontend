@@ -9,7 +9,7 @@ const ContactList = (props)=>{
     const title = props.title;
     const navigateRedirect = useNavigate();
 
-   const { data, isPending, error } = useFetch("/api/contacts");
+   const { data, isPending, error } = useFetch("/contacts");
 
 if (isPending) return <p>Loading...</p>;
 if (error) return <p>{error}</p>;

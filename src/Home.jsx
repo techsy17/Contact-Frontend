@@ -4,7 +4,7 @@ import './index.css'
 
 const Home = ()=>{
 
-    const {data: contact,isPending,error} = useFetch('/api/contacts');
+    const {data: contact,isPending,error} = useFetch('/contacts');
 
     return(
 

@@ -13,7 +13,7 @@ const EditContact = ()=>{
     useEffect(() => {
     const getContactData = async () => {
       try {
-        const contact = await Api(`/api/contact/${id}`, { method: "GET" });
+        const contact = await Api(`/contact/${id}`, { method: "GET" });
         setName(contact.name);
         setEmail(contact.email);
         setPhone(contact.phone);
@@ -30,7 +30,7 @@ const EditContact = ()=>{
         e.preventDefault();
 
        const contactData = {name,email,phone};
-        await Api(`/api/contact/${id}`,{
+        await Api(`/contact/${id}`,{
             method: 'PUT',
             headers: {
                 "Content-Type": "application/json"
