@@ -26,7 +26,7 @@ const handleUpdateContact = (contactId)=>{
 
 const handleDeleteContact = async(contactId)=>{
     try {
-        await Api(`/api/contact/${contactId}`,{
+        await Api(`contact/${contactId}`,{
             method: "DELETE"
         });
         console.log("Contact Deleted Successfully");
